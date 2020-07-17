@@ -9,7 +9,7 @@ body {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
-  align-items: center;
+          align-items: center;
   height: 100vh;
 }
 
@@ -21,7 +21,7 @@ body {
   grid-template-columns: repeat(5, auto);
   grid-template-rows: repeat(4, auto);
   -webkit-box-pack: center;
-  justify-content: center;
+          justify-content: center;
 }
 @media only screen and (max-width: 768px) {
   .photo-grid {
@@ -46,7 +46,7 @@ body {
 }
 .photo-wrap img {
   display: block;
-  width: auto;
+  min-width: 100%;
   max-width: calc((100vw - 2rem) / 5);
   height: auto;
   max-height: calc((100vh - 2rem) / 4);
