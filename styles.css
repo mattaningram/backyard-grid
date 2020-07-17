@@ -1,0 +1,60 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+}
+
+.photo-grid {
+  width: 85%;
+  margin: 1rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, auto);
+}
+@media only screen and (max-width: 768px) {
+  .photo-grid {
+    width: 100%;
+  }
+}
+
+.item-wrap {
+  cursor: pointer;
+  background-color: #dadada;
+  position: relative;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+.item-wrap:hover, .item-wrap:focus-within {
+  opacity: 0.85;
+}
+
+.photo-wrap {
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+.photo-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.photo--back {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.checkbox {
+  display: none;
+}
+.checkbox:checked ~ .photo--back {
+  opacity: 1;
+}
